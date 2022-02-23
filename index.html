@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ №2</title>
+</head>
+<body>
+<!-- Предыдущее дз выполнил не по заданию последний пример, переделал
+    <script>
+        k = prompt("введите целое число");
+        (k%2==0) && alert("число четное");
+        (k%2!=0) && alert("число нечетное");
+    </script> -->
+    
+<script>
+var x=prompt("scolko tebe let"," ");
+if ((x>=0)&&(x<12)) alert ("children")
+else if ((x>=12)&&(x<18)) alert ("teen")
+else if ((x>=18)&&(x<60)) alert ("adult")
+else if ((x>=60)&&(x<150)) alert ("Senior")
+else if (x>=150) alert ("Dunkan Maclaud")
+else alert("tak nelzia")
+</script>
+
+<script>
+var a=prompt("нажми цыфру бчтобы узнать что будет при нажатой кнопке + Shift"," ");
+switch(a){
+case "1": alert("!");
+break;
+case "2": alert("@");
+break;
+case "3": alert("#");
+break;
+case "4": alert("$");
+break;
+case "5": alert("%");
+break;
+case "6": alert("^");
+break;
+case "7": alert("&");
+break;
+case "8": alert("*");
+break;
+case "9": alert("(");
+break;
+case "0": alert(")");
+break;
+default : alert("i don't anderstend");}
+</script>
+
+<script>
+    var l = +prompt("введите трехзначное число","");
+    var z=l%10;//3 число
+    var y=Math.floor(l/10);
+    var y=y%10;//2 число
+    var b=Math.floor(l/100);//1 число
+    if ((b===z)||(b===y)||(z===y)) alert("есть одинаковые числа")
+    else alert("все числа рaзные");
+    alert(b + "," + y + "," + z)
+</script>
+
+<script>
+    var c=prompt("введите год"," ");
+if (((c%4==0)&&(c%100!=0))||(c%400==0)) alert ("visocosniy")
+else alert("ne visocosniy")
+</script>
+
+<script>
+    var d = +prompt("введите пятиразрядное число","");
+    var i=d%10;//5 число
+    var h=Math.floor(d/10);
+    var h=h%10;//4 число
+    var g=Math.floor(d/100);
+    var g=g%10;//3 число
+    var f=Math.floor(d/1000);
+    var f=f%10;//2 число
+    var e=Math.floor(d/10000);//1 число
+    if ((e===i)&&(f===h)) alert("ОГОГО НИЧЕ СЕ ДА ЭТО ЖЕ ПАЛИНДРОООООООООООООМ");
+    else alert("не палиндром :(");   
+</script>
+
+<script>
+    let j=prompt("сколько денег в долларах хотите конвертировать?"," ");
+    let val=prompt("в какую валюту хотите конвертировать: euro, uan, azn?"," ");
+    let k = j*0.88;//euro
+    let m = j*3.68;//uan
+    let n = j*1.7;//azn
+    switch(val){
+        case "euro": alert(k);
+        break;        
+        case "azn": alert(n);
+        break;
+        case "uan": alert(m);
+        break;
+        default : alert("мне непонятно что вы хотите");
+        }
+</script>
+
+<script>
+    var o=prompt("введите сумму покупки, чтобы узнать скидку"," ");
+    var p=o-o*0.03;
+    var q=o-o*0.05;
+    var r=o-o*0.07;
+if ((o>=200)&&(o<300)) alert("цена со скидкой " + p);
+else if ((o>=300)&&(o<500)) alert("цена со скидкой " + q);
+else if (o>=500) alert("цена со скидкой " + r);
+else if (o<=0) alert("не подходи ко мне больше");
+else alert("цена покупки " + o);
+</script>
+
+<script>
+    var perimetr=prompt("введите периметр квадрата"," ");
+    var dlina_okr=prompt("введите длину окружности"," ");
+    var diametr=dlina_okr/3.14;//находим диаметр окружности
+    var storona_kvadrata=perimetr/4;
+    if (storona_kvadrata>diametr)alert("такая окружность поместится в указанный квадрат");
+    else alert("такая окружность никак не поместится в указанный квадрат,совсем не поместится")
+</script>
+
+<script>
+    var ball=0
+    var vopros1=prompt("2*2 будет равно а)4, б)5, в)6" ,"");
+            if (vopros1 == 4){ball=ball+2
+                            alert("верно");}
+            else alert("неверно");
+    var vopros2=prompt("10-5 будет равно а)4, б)5, в)6" ,"");
+            if (vopros2 == 5){ball=ball+2
+                            alert("верно");}
+            else alert("неверно");
+    var vopros3=prompt("3+3 будет равно а)4, б)5, в)6" ,"");
+            if (vopros3 == 6){ball=ball+2
+                            alert("верно");}
+            else alert("неверно"); 
+    alert(ball);
+</script>
+
+<script>
+    let day=+prompt("введите день" ,"");
+    let month=+prompt("введите месяц числом" ,"");
+    let year=+prompt("введите год" ,"");
+        
+    if (((year%4==0)&&(year%100!=0))||(year%400==0))
+        {switch(month)
+            {case 1:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 2:
+                if ((day>0)&&(day<=28)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 29){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 3:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 4:
+                if ((day>0)&&(day<=29)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 30){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break; 
+            case 5:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 6:
+                if ((day>0)&&(day<=29)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 30){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 7:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 8:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;      
+            case 9:
+                if ((day>0)&&(day<=29)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 30){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break; 
+            case 10:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 11:
+                if ((day>0)&&(day<=29)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 30){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break; 
+            case 12:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=1;
+                                   year=year+1
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            default : alert("i don't anderstend");  }}
+    else{switch(month)
+            {case 1:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 2:
+                if ((day>0)&&(day<=27)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 28){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 3:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 4:
+                if ((day>0)&&(day<=29)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 30){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break; 
+            case 5:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 6:
+                if ((day>0)&&(day<=29)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 30){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 7:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 8:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;      
+            case 9:
+                if ((day>0)&&(day<=29)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 30){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break; 
+            case 10:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break;
+            case 11:
+                if ((day>0)&&(day<=29)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 30){day=1;
+                                   month=month+1;
+                                   alert(day + "/" + month + "/" + year);}    
+                break; 
+            case 12:
+                if ((day>0)&&(day<=30)){day=day+1;
+                                        alert(day + "/" + month + "/" + year);}
+                else if (day = 31){day=1;
+                                   month=1;
+                                   year=year+1
+                                   alert(day + "/" + month + "/" + year);}    
+                break; 
+            default : alert("i don't anderstend"); }}
+</script>
+</body>
+</html>
